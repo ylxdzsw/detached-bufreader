@@ -1,0 +1,5 @@
+[package]
+name = "detached-bufreader"
+version = "0.1.0"
+authors = ["Shiwei Zhang <ylxdzsw@gmail.com>"]
+edition = "2018"
