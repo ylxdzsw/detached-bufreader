@@ -17,8 +17,7 @@ impl<'r, R: Read> BufReader<'r, R> {
     }
 
     pub fn with_capacity(capacity: usize, inner: &'r mut R) -> BufReader<R> {
-        let mut buffer = Vec::with_capacity(capacity);
-        buffer.resize(capacity, 0);
+        let buffer = vec![0; capacity];
         BufReader {
             inner,
             buf: buffer.into_boxed_slice(),
